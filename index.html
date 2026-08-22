@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>홈 — Groove, Home</title>
+<title>홈 (Home, Groove)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
@@ -28,11 +28,18 @@
     padding:2rem 1.4rem;
     position:relative;
     overflow-x:hidden;
-    background:radial-gradient(120% 80% at 50% 0%, #f3d9c4 0%, #e9cdd2 32%, #cdc6dd 60%, #b9c4d4 100%);
+    background:#c9c3d9;
+  }
+  /* 배경 그라데이션 — 화면에 고정, 스크롤/펼침과 무관하게 일정 */
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background:radial-gradient(130% 90% at 50% 0%, #f3d9c4 0%, #e9cdd2 34%, #cdc6dd 64%, #c1c8d6 100%);
+    pointer-events:none;
   }
   body::before{
     content:"";
-    position:fixed;inset:0;
+    position:fixed;inset:0;z-index:-1;
     background:radial-gradient(60% 50% at 50% 38%, rgba(255,255,255,.35), transparent 70%);
     pointer-events:none;
   }
@@ -81,13 +88,14 @@
     gap:.25rem;
   }
   .track-title{
+    font-family:"Noto Serif KR",serif;
     font-size:1.5rem;
     font-weight:400;
     letter-spacing:.1em;
     color:var(--ink);
     white-space:nowrap;
   }
-  .title-en{
+  .title-kr{
     font-family:"Cormorant Garamond",serif;
     font-style:italic;
     font-size:1.05rem;
@@ -228,7 +236,7 @@
     </div>
 
     <div class="meta">
-      <div class="track-title">홈 <span class="title-en">(Groove, Home)</span></div>
+      <div class="track-title">홈 <span class="title-kr">(Home, Groove)</span></div>
       <div class="artist">문희열 · Moon, Heeyeol</div>
     </div>
 
@@ -265,8 +273,8 @@
       <div class="about-panel" id="aboutPanel">
         <div class="about-inner">
           <div class="about-name">
-            문희열 <span style="opacity:.45;">|</span> Moon, Heeyeol
-            <span class="role">전남대학교 대학원생 · Chonnam University, Graduate Student</span>
+            문희열 <span style="opacity:.45;">·</span> Moon, Heeyeol
+            <span class="role">전남대학교 · CHONNAM NATIONAL UNIVERSITY</span>
           </div>
           <p class="about-text">본 작품은 끊임없이 신호를 보내는 스마트폰을 그림 가운데 빈자리에 놓음으로써 시각적 이미지를 소리로 바꿉니다. 스마트폰이 지배하던 소음의 공간은, 잡음이 섞인 LP 사운드로 채워집니다.</p>
           <p class="about-text en">In this work, placing the ever-signaling smartphone into the empty space at the center of the image turns the visual image into sound. The space of noise once ruled by the smartphone is filled with the crackle-laden sound of an LP.</p>
